@@ -1,0 +1,19 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import QuienesSomos from '../components/QuienesSomos.astro';
+import Razas from '../components/Razas.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import Contacto from '../components/Contacto.astro';
+---
+
+<Layout title="Rancho El Danubio | Comercialización de Ganado Bovino">
+	<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<Hero />
+		<QuienesSomos />
+		<Razas />
+		<Ubicacion />
+	</main>
+	<Contacto />
+</Layout>

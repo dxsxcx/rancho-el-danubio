@@ -1,0 +1,24 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css'; 
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+    <body class="bg-danubio-chalk text-danubio-brand/90 antialiased min-h-screen selection:bg-danubio-copper/30 selection:text-danubio-brand">
+		<slot />
+	</body>
+</html>

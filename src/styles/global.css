@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-danubio-chalk: #FCFAED;    /* Arena Claro (Nuevo Fondo Global) */
+  --color-danubio-saddle: #9E5407;   /* Terracota (Botones) */
+  --color-danubio-copper: #75592F;   /* Cobrizo (Acentos) */
+  --color-danubio-brand: #473721;    /* Café Viejo (Texto Principal) */
+  --color-danubio-bark: #25190D;     /* Corteza Oscura (Acentos/Footer) */
+}

@@ -1,0 +1,74 @@
+---
+// src/components/Razas.astro
+const cruzas = ['Cebú-Suizo', 'Cebú-Angus', 'Cebú-Charolais', 'Cebú-Simental'];
+const cebuinas = ['Cebú Brahman', 'Cebú Nelore', 'Cebú Sardo Negro'];
+
+const cattlePhotos = [
+  { src: '/photos/cattle-01.jpg', alt: 'Ejemplar Brahman functional' },
+  { src: '/photos/cattle-02.jpg', alt: 'Lote de Cebú-Suizo para engorda' },
+  { src: '/photos/cattle-03.jpg', alt: 'Ranchero con Cebú Brahman' },
+  { src: '/photos/cattle-04.jpg', alt: 'Cebú tomando agua Rancho El Danubio' },
+];
+---
+<section class="py-28 bg-danubio-bark border-b border-danubio-copper/20">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="text-xs font-bold tracking-[0.2em] text-danubio-saddle uppercase block mb-3">Especialización Comercial</span>
+      <h2 class="text-3xl md:text-5xl font-black text-danubio-chalk tracking-tight uppercase">Nuestro Ganado Funcional</h2>
+      <div class="w-16 h-[2px] bg-danubio-saddle/40 mx-auto mt-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      <div class="bg-danubio-brand/40 border border-danubio-brand rounded-xl p-8 hover:border-danubio-saddle transition-all duration-300 shadow-xl lg:col-span-1">
+        <h3 class="text-lg font-bold text-danubio-chalk mb-6 uppercase tracking-wider flex items-center gap-3 border-b border-danubio-brand pb-4">
+          <span class="w-2 h-2 rounded-full bg-danubio-saddle"></span> 
+          Sintéticas o Cruzas
+        </h3>
+        <ul class="space-y-4">
+          {cruzas.map((raza) => (
+            <li class="text-danubio-chalk/80 flex items-center gap-3 font-light text-sm sm:text-base">
+              <span class="text-danubio-saddle font-mono">•</span> {raza}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="bg-danubio-brand/40 border border-danubio-brand rounded-xl p-8 hover:border-danubio-saddle transition-all duration-300 shadow-xl lg:col-span-1">
+        <h3 class="text-lg font-bold text-danubio-chalk mb-6 uppercase tracking-wider flex items-center gap-3 border-b border-danubio-brand pb-4">
+          <span class="w-2 h-2 rounded-full bg-danubio-saddle"></span> 
+          Razas Cebuinas
+        </h3>
+        <ul class="space-y-4">
+          {cebuinas.map((raza) => (
+            <li class="text-danubio-chalk/80 flex items-center gap-3 font-light text-sm sm:text-base">
+              <span class="text-danubio-saddle font-mono">•</span> {raza}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="lg:col-span-1 flex flex-col justify-center bg-danubio-brand/10 p-6 rounded-xl border border-danubio-brand/20">
+        <p class="text-danubio-chalk/70 leading-relaxed font-light text-sm md:text-base">
+          Manejamos genética adaptada al entorno tropical del sureste mexicano, garantizando alta capacidad de conversión de peso, rusticidad y salud estructural para el mercado B2B.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+      {cattlePhotos.map(photo => (
+        <div class="aspect-video md:aspect-square bg-danubio-brand/30 border border-danubio-copper/30 rounded-xl overflow-hidden group shadow-2xl relative">
+          <img 
+            src={photo.src} 
+            alt={photo.alt} 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out opacity-90 group-hover:opacity-100"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-danubio-bark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+            <p class="text-xs text-danubio-chalk font-light tracking-wide">{photo.alt}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <p class="text-center text-[10px] text-danubio-copper/60 mt-6 font-mono tracking-widest uppercase">Rancho El Danubio • Catálogo Ilustrativo</p>
+  </div>
+</section>

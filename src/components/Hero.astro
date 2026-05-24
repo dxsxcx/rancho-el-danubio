@@ -1,0 +1,45 @@
+---
+// src/components/Hero.astro
+---
+<section class="relative min-h-[95vh] flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden border-b border-danubio-copper/10 bg-danubio-chalk">
+  
+  <div class="absolute inset-0 z-0 opacity-90">
+    <img 
+      src="/hero-cattle.jpg" 
+      alt="Fondo Ganado Rancho El Danubio" 
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-danubio-bark/20 mix-blend-multiply"></div>
+    <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-danubio-chalk via-danubio-chalk/70 to-transparent"></div>
+  </div>
+
+  <div class="relative z-10 flex flex-col items-center">
+    
+    <div class="mb-8 w-72 h-72 md:w-96 md:h-96 flex items-center justify-center transition-transform duration-500 hover:scale-105 filter drop-shadow-[0_12px_24px_rgba(37,25,13,0.5)]">
+      <img 
+        src="/logo.png" 
+        alt="Logo Rancho El Danubio" 
+        class="w-full h-full object-contain"
+      />
+    </div>
+
+    <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white uppercase leading-none max-w-5xl balance filter drop-shadow-[0_4px_16px_rgba(37,25,13,0.95)]">
+      Proveedores de Ganado <br class="hidden md:inline"/>Bovino en Pie
+    </h1>
+    
+    <p class="mt-8 text-base sm:text-lg md:text-xl text-white font-medium max-w-3xl leading-relaxed tracking-wide filter drop-shadow-[0_2px_8px_rgba(37,25,13,0.9)]">
+      Especialistas en la compra, venta y acopio de ganado funcional para procesos en corral de engorda y alto rendimiento en canal.
+    </p>
+
+    <div class="mt-12 relative">
+      <a 
+        href="https://wa.me/529241013497?text=Hola%20Isamar,%20me%20interesa%20informaci%C3%B3n%20sobre%20el%20ganado%20de%20Rancho%20El%20Danubio" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-wider rounded-md text-white bg-danubio-saddle hover:bg-danubio-bark transition-all shadow-xl hover:shadow-[0_10px_30px_rgba(158,84,7,0.4)] hover:scale-105 duration-300 border-2 border-white/10"
+      >
+        Contactar Área de Compras
+      </a>
+    </div>
+  </div>
+</section>
